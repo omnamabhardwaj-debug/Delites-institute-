@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Delites Institute – Learn English</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Nunito:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#f4f6fb;--surface:#fff;--ink:#14213d;--muted:#5a6580;--line:#dde3f0;--accent:#fca311;--accent-ink:#14213d;--good:#1f8a70;--bad:#c8372d;--brand:#14213d;--brand-ink:#fff;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1424;--surface:#18203a;--ink:#eef1fa;--muted:#a3adc8;--line:#2b3556;--brand:#fca311;--brand-ink:#14213d;--good:#4fd1ad;--bad:#ff7b70;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1424;--surface:#18203a;--ink:#eef1fa;--muted:#a3adc8;--line:#2b3556;--brand:#fca311;--brand-ink:#14213d;--good:#4fd1ad;--bad:#ff7b70;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 Nunito,system-ui,sans-serif;padding-bottom:84px}
+h1,h2,h3{font-family:'Bricolage Grotesque',Nunito,system-ui,sans-serif;line-height:1.15;margin:0}
+main{max-width:720px;margin:0 auto;padding:20px 16px}
+.top{display:flex;align-items:center;gap:10px;max-width:720px;margin:0 auto;padding:14px 16px 0}
+.logo{width:38px;height:38px;border-radius:10px;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font:800 20px 'Bricolage Grotesque',sans-serif}
+.top b{font:800 19px 'Bricolage Grotesque',sans-serif}
+.top small{display:block;color:var(--muted);font-size:12px;margin-top:-2px}
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;background:var(--surface);border-top:1px solid var(--line);padding:6px 8px calc(6px + env(safe-area-inset-bottom,0px))}
+.tabs a{flex:1;text-align:center;padding:8px 4px;border-radius:12px;color:var(--muted);text-decoration:none;font-weight:700;font-size:13px}
+.tabs a span{display:block;font-size:20px;line-height:1.2}
+.tabs a.on{background:var(--brand);color:var(--brand-ink)}
+.view{display:none}.view.on{display:block}
+.hero{padding:22px 0 8px}
+.hero h1{font-size:clamp(30px,8vw,44px);font-weight:800}
+.hero p{color:var(--muted);max-width:46ch;margin:12px 0 0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;margin-top:18px}
+.course{border:2px solid var(--ink)}
+:root[data-theme="dark"] .course{border-color:var(--accent)}
+.tag{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:800;font-size:13px;padding:4px 10px;border-radius:99px}
+.course h2{font-size:25px;margin:12px 0 6px}
+.price{font:800 34px 'Bricolage Grotesque',sans-serif;margin:10px 0}
+.price s{font-size:0}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+.facts div{background:var(--bg);border-radius:12px;padding:10px 12px;font-size:14px}
+.facts b{display:block;font-size:12px;color:var(--muted);font-weight:600}
+ul.ticks{list-style:none;padding:0;margin:12px 0}
+ul.ticks li{padding-left:26px;position:relative;margin:7px 0}
+ul.ticks li:before{content:"✓";position:absolute;left:0;color:var(--good);font-weight:800}
+.btn{display:inline-block;border:0;cursor:pointer;text-decoration:none;font:700 16px Nunito,sans-serif;padding:13px 20px;border-radius:12px;background:var(--brand);color:var(--brand-ink);text-align:center}
+.btn.full{display:block;width:100%}
+.btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn:focus-visible,.tabs a:focus-visible,.opt:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.soon{color:var(--muted);font-size:14px;text-align:center;margin-top:12px}
+.gamegrid{display:grid;gap:12px;margin-top:16px}
+.gcard{display:flex;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px;cursor:pointer;text-align:left;width:100%;color:var(--ink);font:inherit}
+.gcard i{font-style:normal;font-size:30px;width:52px;height:52px;border-radius:14px;background:var(--bg);display:grid;place-items:center;flex:none}
+.gcard b{font:700 17px 'Bricolage Grotesque',sans-serif;display:block}
+.gcard span{color:var(--muted);font-size:14px}
+.back{background:none;border:0;color:var(--muted);font:700 15px Nunito;cursor:pointer;padding:4px 0;margin-bottom:8px}
+.meter{display:flex;justify-content:space-between;color:var(--muted);font-weight:700;font-size:14px}
+.q{font:700 22px/1.3 'Bricolage Grotesque',sans-serif;margin:16px 0}
+.opts{display:grid;gap:10px}
+.opt{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:12px;padding:13px 14px;font:600 16px Nunito;text-align:left;cursor:pointer}
+.opt.right{border-color:var(--good);background:color-mix(in srgb,var(--good) 18%,var(--surface))}
+.opt.wrong{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 16%,var(--surface))}
+.fb{min-height:24px;margin:12px 0;font-weight:700}
+input[type=text],textarea{width:100%;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:12px;padding:13px;font:600 18px Nunito}
+textarea{font-size:16px;font-weight:400;min-height:190px;resize:vertical}
+.scr{font:800 44px 'Bricolage Grotesque',sans-serif;letter-spacing:.12em;margin:10px 0;text-align:center;word-break:break-all}
+.row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}.row .btn{flex:1;min-width:140px}
+.final{text-align:center;padding:20px 0}.final h2{font-size:34px}
+footer{text-align:center;color:var(--muted);font-size:13px;margin-top:26px}
+footer a{color:inherit}
+@media (prefers-reduced-motion:no-preference){.view.on{animation:in .25s ease-out}@keyframes in{from{opacity:0}to{opacity:1}}}
+</style>
+</head>
+<body>
+<div class="top"><div class="logo">D</div><div><b>Delites Institute</b><small>Learn English. Speak with confidence.</small></div></div>
+
+<main>
+<section id="home" class="view">
+  <div class="hero">
+    <h1>Learn English the simple way.</h1>
+    <p>Practice every day, get guided by teachers, and see real improvement in your speaking, writing and confidence.</p>
+  </div>
+
+  <div class="card course">
+    <span class="tag">Batch starts 15 November</span>
+    <h2>Guaranteed English Improvement Training Program</h2>
+    <p style="color:var(--muted);margin:0">A focused program to take your English from hesitation to fluency.</p>
+    <div class="price">₹1000</div>
+    <div class="facts">
+      <div><b>Start date</b>15 November</div>
+      <div><b>Batch size</b>Only 50 students</div>
+    </div>
+    <ul class="ticks">
+      <li>Speaking practice to remove hesitation</li>
+      <li>Grammar and vocabulary made easy</li>
+      <li>Daily practice with a small batch</li>
+      <li>Guaranteed improvement</li>
+    </ul>
+    <a class="btn full" href="https://forms.gle/nxZYfoGRNZEN3z2Z7" target="_blank" rel="noopener">Register now</a>
+    <p class="soon">Seats are limited to 50. Fill the registration form to reserve yours.</p>
+  </div>
+
+  <div class="card">
+    <h3>Watch us on YouTube</h3>
+    <p style="color:var(--muted);margin:8px 0 14px">Free English lessons and tips from Delites Institute.</p>
+    <a class="btn alt" href="https://youtube.com/@delitesinstitute?si=T9s1fAgTYAgQdkAP" target="_blank" rel="noopener">Open our channel</a>
+  </div>
+</section>
+
+<section id="games" class="view">
+  <div class="hero"><h1>Play and learn.</h1><p>Five minutes a day. Pick a game and improve your English.</p></div>
+  <div id="gamearea"></div>
+</section>
+
+<section id="refer" class="view">
+  <div class="hero"><h1>Refer a friend.</h1><p>Know someone who wants to speak better English? Share the program with them.</p></div>
+  <div class="card">
+    <label for="msg" style="font-weight:700">Your message</label>
+    <textarea id="msg" style="margin-top:8px"></textarea>
+    <div class="row">
+      <a class="btn" id="wa" href="#" target="_blank" rel="noopener">Share on WhatsApp</a>
+      <button class="btn alt" id="copy" type="button">Copy message</button>
+    </div>
+    <div class="fb" id="cfb" role="status"></div>
+    <p style="color:var(--muted);font-size:14px;margin:0">You can edit the message before sharing.</p>
+  </div>
+</section>
+
+<footer>© Delites Institute · <a href="https://youtube.com/@delitesinstitute?si=T9s1fAgTYAgQdkAP" target="_blank" rel="noopener">YouTube</a></footer>
+</main>
+
+<nav class="tabs" aria-label="Main">
+  <a href="#home" data-t="home"><span>🏠</span>Home</a>
+  <a href="#games" data-t="games"><span>🎮</span>Games</a>
+  <a href="#refer" data-t="refer"><span>🎁</span>Refer</a>
+</nav>
+
+<script>
+var TABS=['home','games','refer'];
+function show(){var h=(location.hash||'#home').slice(1);if(TABS.indexOf(h)<0)h='home';
+ TABS.forEach(function(t){document.getElementById(t).classList.toggle('on',t===h)});
+ document.querySelectorAll('.tabs a').forEach(function(a){a.classList.toggle('on',a.dataset.t===h)});window.scrollTo(0,0)}
+window.addEventListener('hashchange',show);show();
+
+/* ---------- Games ---------- */
+var G=[
+ {id:'vocab',icon:'📖',name:'Word Meaning',desc:'Pick the right meaning',q:[
+  ['What does “brief” mean?',['Short','Loud','Heavy'],0],
+  ['What does “rapid” mean?',['Slow','Fast','Quiet'],1],
+  ['What does “ancient” mean?',['Very old','Very new','Very big'],0],
+  ['What does “fragile” mean?',['Strong','Easily broken','Costly'],1],
+  ['What does “generous” mean?',['Willing to give','Always angry','Very tall'],0],
+  ['What does “reluctant” mean?',['Eager','Unwilling','Clever'],1]]},
+ {id:'spell',icon:'✍️',name:'Spelling Check',desc:'Choose the correct spelling',q:[
+  ['Which spelling is correct?',['Recieve','Receive','Receeve'],1],
+  ['Which spelling is correct?',['Beautiful','Beutiful','Beautifull'],0],
+  ['Which spelling is correct?',['Definately','Definitly','Definitely'],2],
+  ['Which spelling is correct?',['Necessary','Neccessary','Necesary'],0],
+  ['Which spelling is correct?',['Tomorow','Tomorrow','Tommorow'],1],
+  ['Which spelling is correct?',['Enviroment','Environment','Enviornment'],1]]},
+ {id:'gram',icon:'🧩',name:'Fill the Blank',desc:'Complete the sentence',q:[
+  ['She ___ to school every day.',['go','goes','going'],1],
+  ['I have ___ my homework already.',['do','did','done'],2],
+  ['They ___ playing football now.',['are','is','was'],0],
+  ['He is ___ than his brother.',['taller','more tall','tallest'],0],
+  ['There ___ two books on the table.',['is','are','be'],1],
+  ['I was born ___ 2005.',['on','at','in'],2]]},
+ {id:'scr',icon:'🔀',name:'Word Unscramble',desc:'Fix the jumbled letters',words:['SCHOOL','FRIEND','ENGLISH','FUTURE','CONFIDENT','SPEAKING','LEARNING','GRAMMAR']}
+];
+var area=document.getElementById('gamearea');
+function menu(){area.innerHTML='<div class="gamegrid">'+G.map(function(g){return '<button class="gcard" data-g="'+g.id+'"><i>'+g.icon+'</i><div><b>'+g.name+'</b><span>'+g.desc+'</span></div></button>'}).join('')+'</div>';
+ area.querySelectorAll('.gcard').forEach(function(b){b.onclick=function(){start(b.dataset.g)}})}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+function end(score,total,again){area.innerHTML='<div class="card final"><h2>'+score+' / '+total+'</h2><p>'+(score>=total*0.8?'Excellent work! 🎉':score>=total/2?'Good job. Keep practising!':'Keep going. Practice makes you better.')+'</p><div class="row"><button class="btn" id="ag">Play again</button><button class="btn alt" id="mn">All games</button></div></div>';
+ document.getElementById('ag').onclick=again;document.getElementById('mn').onclick=menu}
+function start(id){var g=G.filter(function(x){return x.id===id})[0];if(g.id==='scr')return scramble(g);quiz(g)}
+function quiz(g){var qs=shuffle(g.q),i=0,s=0;
+ function render(){var q=qs[i];var idx=shuffle([0,1,2]);
+  area.innerHTML='<button class="back" id="bk">← All games</button><div class="card"><div class="meter"><span>Question '+(i+1)+' of '+qs.length+'</span><span>Score '+s+'</span></div><div class="q">'+q[0]+'</div><div class="opts">'+idx.map(function(k){return '<button class="opt" data-k="'+k+'">'+q[1][k]+'</button>'}).join('')+'</div><div class="fb" id="fb" role="status"></div><button class="btn full" id="nx" style="display:none">'+(i===qs.length-1?'See score':'Next question')+'</button></div>';
+  document.getElementById('bk').onclick=menu;var done=false;
+  area.querySelectorAll('.opt').forEach(function(b){b.onclick=function(){if(done)return;done=true;var ok=+b.dataset.k===q[2];
+   if(ok){s++;b.classList.add('right');fb.textContent='Correct! ✅'}else{b.classList.add('wrong');area.querySelectorAll('.opt').forEach(function(o){if(+o.dataset.k===q[2])o.classList.add('right')});fb.textContent='Not quite. The right answer is “'+q[1][q[2]]+'”.'}
+   fb.style.color=ok?'var(--good)':'var(--bad)';document.getElementById('nx').style.display='block'}});
+  var fb=document.getElementById('fb');
+  document.getElementById('nx').onclick=function(){i++;i<qs.length?render():end(s,qs.length,function(){quiz(g)})}}
+ render()}
+function scramble(g){var ws=shuffle(g.words).slice(0,6),i=0,s=0;
+ function jumble(w){var j;do{j=shuffle(w.split('')).join('')}while(j===w);return j}
+ function render(){var w=ws[i];
+  area.innerHTML='<button class="back" id="bk">← All games</button><div class="card"><div class="meter"><span>Word '+(i+1)+' of '+ws.length+'</span><span>Score '+s+'</span></div><div class="scr">'+jumble(w)+'</div><p style="text-align:center;color:var(--muted);margin:0 0 12px">Type the correct word ('+w.length+' letters)</p><input type="text" id="ans" autocomplete="off" autocapitalize="characters" aria-label="Your answer"><div class="fb" id="fb" role="status"></div><div class="row"><button class="btn" id="ck">Check</button><button class="btn alt" id="sk">Skip</button></div></div>';
+  document.getElementById('bk').onclick=menu;var inp=document.getElementById('ans'),fb=document.getElementById('fb');
+  function next(){i++;i<ws.length?render():end(s,ws.length,function(){scramble(g)})}
+  function check(){var v=inp.value.trim().toUpperCase();if(!v)return;
+   if(v===w){s++;fb.style.color='var(--good)';fb.textContent='Correct! ✅';setTimeout(next,700)}else{fb.style.color='var(--bad)';fb.textContent='Try again.'}}
+  document.getElementById('ck').onclick=check;inp.onkeydown=function(e){if(e.key==='Enter')check()};
+  document.getElementById('sk').onclick=function(){fb.style.color='var(--muted)';fb.textContent='The word was '+w+'.';setTimeout(next,1200)}}
+ render()}
+menu();
+
+/* ---------- Refer ---------- */
+var link='https://forms.gle/nxZYfoGRNZEN3z2Z7';
+var msgEl=document.getElementById('msg');
+msgEl.value='Hi! 👋\n\nI am learning English with Delites Institute and I think you will love it too.\n\n🎯 Guaranteed English Improvement Training Program\n💰 Only ₹1000\n📅 Starts 15 November\n👥 Only 50 students in the batch\n\nRegister here before seats are full:\n'+link;
+function upd(){document.getElementById('wa').href='https://wa.me/?text='+encodeURIComponent(msgEl.value)}
+msgEl.oninput=upd;upd();
+document.getElementById('copy').onclick=function(){var f=document.getElementById('cfb');
+ function ok(){f.style.color='var(--good)';f.textContent='Message copied! Now paste it anywhere.'}
+ function fail(){msgEl.select();f.style.color='var(--muted)';f.textContent='Press and hold, then tap Copy.'}
+ try{navigator.clipboard.writeText(msgEl.value).then(ok,fail)}catch(e){fail()}};
+</script>
+</body>
+</html>
